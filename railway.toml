@@ -1,0 +1,13 @@
+[build]
+build_command = "npm run build"
+start_command = "npm start"
+
+[deploy]
+startCommand = "npm start"
+healthcheckPath = "/"
+healthcheckTimeout = 100
+restartPolicyType = "on_failure"
+
+[[ports]]
+port = "${PORT:-3000}"
+protocol = "http"
